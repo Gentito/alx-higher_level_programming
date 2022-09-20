@@ -1,5 +1,13 @@
-#!/usr/bin/python3
+0;10;1c#!/usr/bin/python3
 def remove_char_at(str, n):
-    i = str[:n]
-    x = str[n+1:]
-    return i + x 
+    if n < 0:
+        return str
+    count = 0
+    str_dup = ""
+    for elem in str:
+        if count == n:
+            count += 1
+            continue
+        str_dup += str[count]
+        count += 1
+        return str_dup
