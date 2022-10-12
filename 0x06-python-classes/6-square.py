@@ -77,18 +77,18 @@ class Square:
             self.__position = value
 
     def area(self):
-                                                                                                    """
+        """
         Calculates area of square
         Returns:
             area
         """
-                                                                                                    return (self.__size)**2
+        return (self.__size)**2
 
-                                                                                                def my_print(self):
-                                                                                                    if self.__size == 0:
-                                                                                                        print("")
-                                                                                                    else:
-                                                                                                        print("\n" * self.__position[1], end="")
-                                                                                                        print("\n".join([" " * self.__position[0] +
-                                                                                                                         "#" * self.__size
-                                                                                                                         for rows in range(self.__size)]))
+    def my_print(self):
+        if self.__size == 0:
+            print("")
+        else:
+            print("\n" * self.__position[1], end="")
+            print("\n".join([" " * self.__position[0] +
+                             "#" * self.__size
+                             for rows in range(self.__size)]))
